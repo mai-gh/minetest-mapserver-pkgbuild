@@ -1,0 +1,11 @@
+[Unit]
+Description=Minetest mapserver w/ 0.conf server config
+After=syslog.target network.target
+
+[Service]
+User=minetest
+WorkingDirectory=/var/lib/minetest/0/
+ExecStart=/usr/bin/minetest-mapserver
+
+[Install]
+WantedBy=multi-user.target
